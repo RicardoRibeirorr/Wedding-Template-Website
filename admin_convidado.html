@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Wedding Link</title>
+</head>
+<body>
+    <h1>Gerar Link para o Casamento</h1>
+    <p>Introduza o nome do convidado:</p>
+
+    <!-- Input for guest's name -->
+    <input type="text" id="guestName" placeholder="Nome do Convidado" required>
+    <button onclick="generateLink()">Gerar Link</button>
+
+    <p id="generatedLink"></p>
+
+    <script>
+        function generateLink() {
+            // Get the guest name from the input field
+            var guestName = document.getElementById('guestName').value.trim();
+
+            // Check if the input is not empty
+            if (guestName) {
+                // Generate the URL
+                var encodedName = encodeURIComponent(guestName);
+                var url = 'casamento.com?n=' + encodedName;
+
+                // Display the generated link
+                document.getElementById('generatedLink').innerHTML = 'Link gerado: <a href="' + url + '" target="_blank">' + url + '</a>';
+            } else {
+                alert('Por favor, insira o nome do convidado.');
+            }
+        }
+    </script>
+</body>
+</html>
