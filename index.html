@@ -13,7 +13,8 @@
         }
 
         .hero-container {
-            background: url('6.jpeg') no-repeat center center;
+           /* background: url('6.jpeg') no-repeat center center; */
+            background: url('6_new_mobile.png') no-repeat center center;
             background-size: cover;
             height: 100vh;
         }
@@ -72,6 +73,10 @@
         section.content-section::before {
             /* color: red; */
         }
+        
+        .title{
+            margin-top: 2rem!important;
+        }
 
         .content-section::before {
             content: "";
@@ -83,18 +88,23 @@
 
         @media (max-width: 600px) {
             .hero h2 {
-                font-size: 6.5rem !important;
+                font-size: 4rem !important;
                 margin-bottom: 2rem;
             }
+            
 
-
-            .hero-container {
-                background: url('61_mobile.png') no-repeat center center !important;
-                background-size: cover !important;
+            .hero{
+                box-shadow: inset 0 0 50px 0px rgb(140 74 48);
             }
 
+
+            /* .hero-container {
+                background: url('61_mobile.png') no-repeat center center !important;
+                background-size: cover !important;
+            } */
+
             .date {
-                font-size: 3.2rem !important;
+                font-size: 2.2rem !important;
             }
 
             .invite {
@@ -102,8 +112,19 @@
             }
 
             .title {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
+                margin-top: 6rem!important;
             }
+            .plesure_invite {
+                font-size: 2rem !important;
+            }
+            .content-section::before{
+            background-color:#ffffffba;
+        }
+
+            .info-box h3 {
+    font-size: 1.5rem!important;
+}
         }
     </style>
 </head>
@@ -122,12 +143,12 @@
 ">Casamento</p>
                 <h2 style="
     color: #b77e35;
-">Bruno <span style="
+">Raquel <span style="
                     font-size: 4rem;
                     color: #d9b88e !important;
                     align-self: center;
                     text-shadow: 0px 0px 6px rgb(255 255 255 / 41%);
-                ">&amp;</span> Raquel</h2>
+                ">&amp;</span> Bruno</h2>
                 <h4 class="date" style="
                     font-size: 4.2rem;
                     color: #d9b88e;
@@ -136,7 +157,7 @@
 
 
 
-                <h4 style="
+                <h4 class="plesure_invite" style="
                     font-size: 2rem;
                     color: #d1b38e;
                     max-width: 41rem;
@@ -213,11 +234,11 @@
 ">Entre em contacto para confirmar a sua presença até <b style="color: #714a19; ">14 Julho 2025</b><br><br><a id="smsLink_1" href="#" style="
     color: #714a19;
     font-size: 1.2rem; line-height: 2rem;
-">919276434 - Raquel</a>
+">910920814 - Raquel</a>
 <br><a id="smsLink_2" href="#" style="
 color: #714a19;
 font-size: 1.2rem; line-height: 2rem;
-">919276434 - Bruno</a></p>
+">915992417 - Bruno</a></p>
                     </div>
                 </div>
 
@@ -259,7 +280,7 @@ font-size: 1.2rem; line-height: 2rem;
     /* color: #777777; */
     font-size: 1.5rem;
     color: #a58057;
-">O casamento será realizado no dia <br><b style="
+">O nosso casamento será realizado no dia <br><b style="
     /* color: #ff5252; */
     color: #714a19;
     font-size: 1.7rem;
@@ -308,8 +329,9 @@ font-size: 1.2rem; line-height: 2rem;
             let message = `Confirmo a minha presença!%0AAssinado: ${name}`;
     
             // Update the SMS link
-            document.getElementById("smsLink_1").href = `sms:?body=${message}`;
-            document.getElementById("smsLink_2").href = `sms:?body=${message}`;
+            console.log(document.getElementById("smsLink_1"))
+            document.getElementById("smsLink_1").href = `sms:+910920814?body=${message}`;
+            document.getElementById("smsLink_2").href = `sms:+915992417?body=${message}`;
         }
     </script>
 
